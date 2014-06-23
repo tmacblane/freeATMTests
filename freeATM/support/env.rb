@@ -1,8 +1,8 @@
 require 'cucumber'
 require 'selenium-webdriver'
 
-Before do
 
+Before do
 
   if ENV["FIREFOX"] then
     ffp = Selenium::WebDriver::Firefox::Profile.new
@@ -51,18 +51,19 @@ Before do
   @wait = Selenium::WebDriver::Wait.new(:timeout => 5)
 
 
-  @BASE_URL = ""
+  @BASE_URL = "http://www.google.com"
 
   @browser = browser
+
   begin
     @browser.navigate.to(@BASE_URL)
   rescue
+
   end
 
 end
 
 After do
-
   @browser.close
   @browser.quit
 end
