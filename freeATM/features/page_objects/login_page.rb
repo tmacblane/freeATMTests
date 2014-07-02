@@ -6,8 +6,8 @@ class LoginPage < BrowserHelper
     @browser = browser
   end
 
-  def enter_email_address(address)
-    email_textbox.send_keys(address)
+  def enter_email_address(email_address)
+    email_textbox.send_keys(email_address)
   end
 
   def enter_password(password)
@@ -18,18 +18,24 @@ class LoginPage < BrowserHelper
     login_button.click
   end
 
+  def login(email_address, password)
+    self.enter_email_address(email_address)
+    self.enter_password(password)
+    self.click_login_button
+  end
+
   private
 
   def email_textbox
-    self.get_element(@browser, 'emailTextBox', '')
+    self.get_element(@browser, 'userName')
   end
 
   def password_textbox
-    self.get_element(@browser, 'passwordTextBox', '')
+    self.get_element(@browser, 'password')
   end
 
   def login_button
-    self.get_element(@browser, '//div[@id="ctl00_mainContentPlaceHolder_loginButton"]/div', '')
+    self.get_element(@browser, 'login')
   end
 
 end

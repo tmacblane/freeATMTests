@@ -50,7 +50,7 @@ Before do
   @wait = Selenium::WebDriver::Wait.new(:timeout => 5)
 
 
-  @BASE_URL = 'http://my.mimeo.com'
+  @BASE_URL = 'http://qa.cms.thefreeatm.com/users/login'
 
   @browser = browser
 
@@ -63,6 +63,6 @@ Before do
 end
 
 After do
-  #@browser.close
-  #@browser.quit
+  @browser.close
+  @browser.quit
 end
