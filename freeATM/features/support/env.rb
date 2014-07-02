@@ -50,7 +50,7 @@ Before do
   @wait = Selenium::WebDriver::Wait.new(:timeout => 5)
 
 
-  @BASE_URL = 'http://qa.cms.thefreeatm.com/users/login'
+  @BASE_URL = 'http://qa.cms.thefreeatm.com/'
 
   @browser = browser
 
