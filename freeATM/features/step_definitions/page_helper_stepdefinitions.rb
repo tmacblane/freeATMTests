@@ -24,3 +24,7 @@ def set_page(page)
   end
 
 end
+
+Given(/^I open the user login page$/) do
+  @browser.navigate.to('http://qa.cms.thefreeatm.com/users/login')
+end

@@ -52,7 +52,7 @@ class DevicePage < BrowserHelper
   end
 
   def select_location(address)
-    option = Selenium::WebDriver::Support::Select,new(locations_dropdown_list)
+    option = Selenium::WebDriver::Support::Select.new(locations_dropdown_list)
     option.select_by(:text, address)
   end
 
