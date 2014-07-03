@@ -92,6 +92,131 @@ class LocationsPage < BrowserHelper
   end
   #####end add neighborhood
 
+  #####add organizations
+  def click_add_organizations_link
+    add_organizations_link.click
+  end
+
+  def select_organization_location(organization_location)
+    option = Selenium::WebDriver::Support::Select.new(organizaion_dropdown_list)
+    option.select_by(:text, organization_location)
+  end
+
+  def select_organization(organization)
+    option = Selenium::WebDriver::Support::Select.new(organizaion_dropdown_list)
+    option.select_by(:text, organization)
+  end
+
+  def select_organization_type(organization_type)
+    option = Selenium::WebDriver::Support::Select.new(organization_type_dropdown_list)
+    option.select_by(:text, organization_type)
+  end
+
+  def click_create_organization_button
+    create_organization_button.click
+  end
+  #####end add organization
+
+  #####add venue statistics
+  def click_add_venue_statistics_link
+    add_venue_statistics_link.click
+  end
+
+  def select_venue_type(venue_type)
+    option = Selenium::WebDriver::Support::Select.new(venue_type_dropdown_list)
+    option.select_by(:text, venue_type)
+  end
+
+  def enter_gvt_entered(gvt_entered)
+    gvt_entered_textbox.send_keys(gvt_entered)
+  end
+
+  def select_gvt_type(gvt_type)
+    option = Selenium::WebDriver::Support::Select.new(gvt_enter_type_dropdown_list)
+    option.select_by(:text, gvt_type)
+  end
+
+  def select_venue_location(venue_location)
+    option = Selenium::WebDriver::Support::Select.new(venue_location_dropdown_list)
+    option.select_by(:text, venue_location)
+  end
+
+  def click_create_venue_statistics_button
+    create_venue_statistics_button.click
+  end
+  #####end add venue statistics
+
+  #####add hours
+  def click_add_hours_link
+    add_hours_link.click
+  end
+
+  def select_hours_location(hours_location)
+    option = Selenium::WebDriver::Support::Select.new(hours_location_dropdown_list)
+    option.select_by(:text, hours_location)
+  end
+
+  def select_weekday(weekday)
+    option = Selenium::WebDriver::Support::Select.new(weekday_dropdown_list)
+    option.select_by(:text, weekday)
+  end
+
+  def select_opentime(open_time)
+    option = Selenium::WebDriver::Support::Select.new(opentime_dropdown_list)
+    option.select_by(:text, open_time)
+  end
+
+  def select_closetime(close_time)
+    option = Selenium::WebDriver::Support::Select.new(closetime_dropdown_list)
+    option.select_by(:text, close_time)
+  end
+
+  def click_create_hours_button
+    create_hours_button.click
+  end
+  #####end add hours
+
+  #####add devices
+  def click_add_devices_link
+    add_devices_link.click
+  end
+
+  def select_device_type(device_type)
+    option = Selenium::WebDriver::Support::Select.new(device_type_dropdown_list)
+    option.select_by(:text, device_type)
+  end
+
+  def enter_model_type(model_type)
+    model_type_textbox.send_keys(model_type)
+  end
+
+  def enter_serial_number(serial_number)
+    serial_number_textbox.send_keys(serial_number)
+  end
+
+  def select_status(status)
+    option = Selenium::WebDriver::Support::Select.new(status_dropdown_list)
+    option.select_by(:text, status)
+  end
+
+  def enter_external_id(external_id)
+    external_id_textbox.send_keys(external_id)
+  end
+
+  def select_device_location(device_location)
+    option = Selenium::WebDriver::Support::Select.new(device_locations_dropdown_list)
+    option.select_by(:text, device_location)
+  end
+
+  def click_create_device_button
+    create_device_button.click
+  end
+  #####end add devices
+
+  def click_create_button
+    create_button.click
+  end
+
 
   ###########################
   ##### Page Properties #####
@@ -205,7 +330,7 @@ class LocationsPage < BrowserHelper
     self.get_element(@browser, 'type')
   end
 
-  def create_organization_ubutton
+  def create_organization_button
     self.get_element(@browser, 'create')
   end
   #####end add organization
