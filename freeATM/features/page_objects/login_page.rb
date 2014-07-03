@@ -24,6 +24,10 @@ class LoginPage < BrowserHelper
     self.click_login_button
   end
 
+  def alert_message_visible
+    alert_message.displayed?
+  end
+
   private
 
   def email_textbox
@@ -36,6 +40,10 @@ class LoginPage < BrowserHelper
 
   def login_button
     self.get_element(@browser, 'login')
+  end
+
+  def alert_message
+    self.get_element(@browser, '//div[@class="message"]')
   end
 
 end
