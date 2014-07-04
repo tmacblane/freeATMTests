@@ -18,3 +18,4 @@ hs_err_pid*
 /FreeATM.WebTest.Core/build/
 /FreeATM/target/
 /freeATM/.idea/workspace.xml
+/.idea/workspace.xml
