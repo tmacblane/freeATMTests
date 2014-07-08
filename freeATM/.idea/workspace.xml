@@ -6,7 +6,9 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/schedules_page.rb" changelist="22f85ddd-e1b8-4426-a9a3-ea89424fe0ec" time="1404767612822" ignored="false" />
     <file path="/states_page.rb" changelist="22f85ddd-e1b8-4426-a9a3-ea89424fe0ec" time="1404768270177" ignored="false" />
-    <file path="/targeteer_page.rb" changelist="22f85ddd-e1b8-4426-a9a3-ea89424fe0ec" time="1404769090061" ignored="false" />
+    <file path="/targeteer_page.rb" changelist="22f85ddd-e1b8-4426-a9a3-ea89424fe0ec" time="1404781089737" ignored="false" />
+    <file path="/users_page.rb" changelist="22f85ddd-e1b8-4426-a9a3-ea89424fe0ec" time="1404781286028" ignored="false" />
+    <file path="/venues_statistics_page.rb" changelist="22f85ddd-e1b8-4426-a9a3-ea89424fe0ec" time="1404781724773" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/freeATM@I_should_see_be_alerted_which_fields_are_required__freeATM__1_.coverage" NAME="I should see be alerted which fields are required: freeATM (1) Coverage Results" MODIFIED="1404346190520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/freeATM@I_should_be_alerted_that_my_account_will_be_locked_after_x_wrong_log_in_attempts__freeATM.coverage" NAME="I should be alerted that my account will be locked after x wrong log in attempts: freeATM Coverage Results" MODIFIED="1404346781370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/freeATM@I_should_see_be_alerted_which_fields_are_required__freeATM__1_.coverage" NAME="I should see be alerted which fields are required: freeATM (1) Coverage Results" MODIFIED="1404346190520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/freeATM@test__freeATM.coverage" NAME="test: freeATM Coverage Results" MODIFIED="1404269315383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/freeATM@login__freeATM.coverage" NAME="login: freeATM Coverage Results" MODIFIED="1404346202998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/freeATM@I_should_see_be_alerted_which_fields_are_required__freeATM.coverage" NAME="I should see be alerted which fields are required: freeATM Coverage Results" MODIFIED="1404345695547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -33,73 +35,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="login_page.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/page_objects/login_page.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page_helper_stepdefinitions.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/step_definitions/page_helper_stepdefinitions.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_page_stepdefinitions.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/step_definitions/login_page_stepdefinitions.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="login.feature" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/login.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="persons_page.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/page_objects/persons_page.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="0" selection-start="1782" selection-end="1881" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schedules_page.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/page_objects/schedules_page.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="states_page.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/page_objects/states_page.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="745" selection-end="844" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="targeteer_page.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/features/page_objects/targeteer_page.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="39" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.9307065">
               <folding />
             </state>
           </provider>
@@ -114,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="persons_controller.feature" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="persons_controller.feature" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/persons_controller.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="3" column="62" selection-start="43" selection-end="43" vertical-scroll-proportion="0.067371204">
               <folding />
             </state>
           </provider>
@@ -133,8 +72,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/features/support/browser_helper.rb" />
-        <option value="$PROJECT_DIR$/features/page_objects/creatives_page.rb" />
         <option value="$PROJECT_DIR$/features/page_objects/devices_page.rb" />
         <option value="$PROJECT_DIR$/features/page_objects/creative_page.rb" />
         <option value="$PROJECT_DIR$/features/page_objects/hours_page.rb" />
@@ -149,6 +86,8 @@
         <option value="$PROJECT_DIR$/features/page_objects/schedules_page.rb" />
         <option value="$PROJECT_DIR$/features/page_objects/states_page.rb" />
         <option value="$PROJECT_DIR$/features/page_objects/targeteer_page.rb" />
+        <option value="$PROJECT_DIR$/features/page_objects/users_page.rb" />
+        <option value="$PROJECT_DIR$/features/page_objects/venues_statistics_page.rb" />
       </list>
     </option>
   </component>
@@ -200,7 +139,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -243,17 +181,18 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="appearance" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="appearance" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -541,7 +480,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22329472" sideWeight="0.6709347" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22651222" sideWeight="0.6709347" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -629,18 +568,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/features/page_objects/home_page.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/support/env.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/features/step_definitions/page_helper_stepdefinitions.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -669,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/persons_controller.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/features/page_objects/locations_page.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -685,30 +605,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/page_objects/neighborhoods_page.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/page_objects/passwords_page.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.17798913">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.17798913" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/page_objects/organizations_page.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.11548913">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/login.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.11548913" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/page_objects/schedules_page.rb">
@@ -720,21 +627,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/page_objects/persons_page.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="1782" selection-end="1881" vertical-scroll-proportion="0.0">
+        <state line="46" column="0" selection-start="952" selection-end="1077" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/page_objects/states_page.rb">
+    <entry file="file://$PROJECT_DIR$/features/page_objects/users_page.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="745" selection-end="844" vertical-scroll-proportion="0.0">
+        <state line="12" column="0" selection-start="212" selection-end="311" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/page_objects/venues_statistics_page.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="23" selection-start="899" selection-end="899" vertical-scroll-proportion="0.73913044">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/page_objects/targeteer_page.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="39" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.9307065">
+        <state line="92" column="0" selection-start="2182" selection-end="2304" vertical-scroll-proportion="0.2771739">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/page_objects/states_page.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="745" selection-end="844" vertical-scroll-proportion="0.98811096">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/login.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/persons_controller.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="62" selection-start="43" selection-end="43" vertical-scroll-proportion="0.067371204">
           <folding />
         </state>
       </provider>

@@ -6,6 +6,99 @@ class TargeteerPage < BrowserHelper
     @browser = browser
   end
 
+  def click_atm_button
+    atm_radio_button.click
+  end
+
+  def click_display_unit_button
+    display_unit_radio_button.click
+  end
+
+  def click_point_radius_button
+    point_radius_radio_button.click
+  end
+
+  def click_zip_code_button
+    zip_code_radio_button.click
+  end
+
+  def select_neighborhoods_button
+    neighborhoods_radio_button.click
+  end
+
+  def click_boroughs_button
+    boroughs_radio_button.click
+  end
+
+  def enter_point_radius(point_radius)
+    point_radius_textbox.send_keys(point_radius)
+  end
+
+  def enter_radius(radius)
+    radius_textbox.send_keys(radius)
+  end
+
+  def enter_zip_code(zip_code)
+    zip_code_textbox.send_keys(zip_code)
+  end
+
+  def select_neighbohood(neighborhood)
+    option = Selenium::WebDriver::Support::Select.new(neighborhoods_listbox)
+    option.select_by(:text, neighborhood)
+  end
+
+  def select_borough(borough)
+    option = Selenium::WebDriver::Support::Select.new(borough_listbox)
+    option.select_by(:text, borough)
+  end
+
+  def select_venue_type(venue_type)
+    option = Selenium::WebDriver::Support::Select.new(venue_type_listbox)
+    option.select_by(:text, venue_type)
+  end
+
+  def click_clear_button
+    clear_button.click
+  end
+
+  def click_search_button
+    search_button.click
+  end
+
+  def click_schedule_button
+    schedule_button.click
+  end
+
+  def select_start_date_day(start_day)
+    option = Selenium::WebDriver::Support::Select.new(start_date_day_dropdown_list)
+    option.select_by(:text, start_day)
+  end
+
+  def select_start_date_month(start_month)
+    option = Selenium::WebDriver::Support::Select.new(start_date_month_dropdown_list)
+    option.select_by(:text, start_month)
+  end
+
+  def select_start_date_year(start_year)
+    option = Selenium::WebDriver::Support::Select.new(start_date_year_dropdown_list)
+    option.select_by(:text, start_year)
+  end
+
+  def select_end_date_day(end_day)
+    option = Selenium::WebDriver::Support::Select.new(end_date_day_dropdown_list)
+    option.select_by(:text, end_day)
+  end
+
+  def select_end_date_month(end_month)
+    option = Selenium::WebDriver::Support::Select.new(end_date_month_dropdown_list)
+    option.select_by(:text, end_month)
+  end
+
+  def select_end_date_year(end_year)
+    option = Selenium::WebDriver::Support::Select.new(end_date_year_dropdown_list)
+    option.select_by(:text, end_year)
+  end
+
   ###########################
   ##### Page Properties #####
   ###########################
