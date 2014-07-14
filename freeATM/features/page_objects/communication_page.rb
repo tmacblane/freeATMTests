@@ -15,10 +15,11 @@ class CommunicationPage < BrowserHelper
   end
 
   def enter_communication_value(value)
+    communication_value_textbox.clear
     communication_value_textbox.send_keys(value)
   end
 
-  def communication_value_textbox_visble
+  def communication_value_textbox_visible
     communication_value_textbox.displayed?
   end
 
@@ -31,6 +32,10 @@ class CommunicationPage < BrowserHelper
     create_button.click
   end
 
+  def click_update_button
+    update_button.click
+  end
+
   def select_communication(communication_value)
     communication_table_communication_values.each do |value|
       if value.text == communication_value.strip
@@ -40,17 +45,21 @@ class CommunicationPage < BrowserHelper
     end
   end
 
+  def get_communication_error_text
+    communication_error_label.text
+  end
+
   ###########################
   ##### Page Properties #####
   ###########################
   private
 
   def new_communications_button
-    self.get_element(@browser, '//div[@role="navigation"]/ul/li/a[@href="/communications/index"]')
+    self.get_element(@browser, '//div[@role="navigation"]/ul/li/a[@href="/communications/create"]')
   end
 
   def communications_list_button
-    self.get_element(@browser, '//div[@role="navigation"]/ul/li/a[@href="/communications/create"]')
+    self.get_element(@browser, '//div[@role="navigation"]/ul/li/a[@href="/communications/index"]')
   end
 
   def communication_value_textbox
@@ -65,11 +74,19 @@ class CommunicationPage < BrowserHelper
     self.get_element(@browser, 'create')
   end
 
+  def update_button
+    self.get_element(@browser, '//input[@class="input"]')
+  end
+
   def communication_table_communication_values()
     self.get_elements(@browser, '//div[@id="list-communications"]/table/tbody/tr/td[1]/a')
   end
 
   def communication_table_type_values(additional_locator = '')
     self.get_elements(@browser, '//div[@id="list-communications"]/table/tbody/tr/td[2]/a', additional_locator)
+  end
+
+  def communication_error_label
+    self.get_element(@browser, '//li[@data-field-id="communication_Value"]')
   end
 end

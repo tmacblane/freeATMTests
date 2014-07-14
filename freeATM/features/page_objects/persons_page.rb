@@ -27,14 +27,17 @@ class PersonsPage < BrowserHelper
   end
 
   def enter_first_name(first_name)
+    first_name_textbox.clear
     first_name_textbox.send_keys(first_name)
   end
 
   def enter_last_name(last_name)
+    last_name_textbox.clear
     last_name_textbox.send_keys(last_name)
   end
 
   def enter_title(title)
+    title_textbox.clear
     title_textbox.send_keys(title)
   end
 
@@ -75,6 +78,41 @@ class PersonsPage < BrowserHelper
     create_button.click
   end
 
+  def click_edit_button
+    edit_button.click
+  end
+
+  def click_delete_button
+    delete_button.click
+  end
+
+  def click_update_button
+    update_button.click
+  end
+
+  def get_first_name_required_error_text
+    first_name_required_error_label.text
+  end
+
+  def get_last_name_required_error_text
+    last_name_required_error_label.text
+  end
+
+  def get_title_required_error_text
+    title_required_error_label.text
+  end
+
+  def get_first_name_text
+    first_name_label.text
+  end
+
+  def get_last_name_text
+    last_name_label.text
+  end
+
+  def get_title_text
+    title_label.text
+  end
 
   ###########################
   ##### Page Properties #####
@@ -143,6 +181,46 @@ class PersonsPage < BrowserHelper
 
   def create_button
     self.get_element(@browser, 'create')
+  end
+
+  def edit_button
+    self.get_element(@browser, '//a[@class="edit"]')
+  end
+
+  def delete_button
+    self.get_element(@browser, '//a[@class="delete"]')
+  end
+
+  def update_button
+    self.get_element(@browser, '//input[@class="save"]')
+  end
+
+  def first_name_required_error_label
+    self.get_element(@browser, '//li[@data-field-id="first_name"]')
+  end
+
+  def last_name_required_error_label
+    self.get_element(@browser, '//li[@data-field-id="last_name"]')
+  end
+
+  def title_required_error_label
+    self.get_element(@browser, '//li[@data-field-id="title"]')
+  end
+
+  def first_name_label
+    self.get_element(@browser, '//span[@aria-labelledby="first_name-label"]')
+  end
+
+  def last_name_label
+    self.get_element(@browser, '//span[@aria-labelledby="last_name-label"]')
+  end
+
+  def title_label
+    self.get_element(@browser, '//span[@aria-labelledby="title-label"]')
+  end
+
+  def communications_label
+    self.get_element(@browser, '//span[@aria-labelledby="communications-label"]')
   end
 
 end

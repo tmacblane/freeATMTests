@@ -1,3 +1,5 @@
+$PAGE = nil
+
 Given(/^I am on the (.*) page$/) do |page|
   set_page(page)
 end
@@ -10,15 +12,21 @@ end
 private
 
 def set_page(page)
+  $PAGE = page
 
   case page
-    when 'communications list'
-    when 'show communications'
+    when 'communications index', 'show communications', 'create communications'
       @communications_page = CommunicationPage.new(@browser)
     when 'home'
       @home_page = HomePage.new(@browser)
+    when 'locations index', 'create locations', 'show locations', 'edit locations'
+      @locations_page = LocationsPage.new(@browser)
     when 'user login'
-        @login_page = LoginPage.new(@browser)
+      @login_page = LoginPage.new(@browser)
+    when 'passwords index', 'create password'
+      @passwords_page = PasswordsPage.new(@browser)
+    when 'persons index', 'show persons', 'create persons', 'edit persons'
+      @persons_page = PersonsPage.new(@browser)
     else
       pending(page + ' page has not been configured')
   end
@@ -27,4 +35,8 @@ end
 
 Given(/^I open the user login page$/) do
   @browser.navigate.to('http://qa.cms.thefreeatm.com/users/login')
+end
+
+When(/^I open the home page$/) do
+  @browser.navigate.to('http://qa.cms.thefreeatm.com')
 end

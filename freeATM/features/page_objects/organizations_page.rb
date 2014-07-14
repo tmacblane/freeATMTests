@@ -27,6 +27,7 @@ class OrganizationsPage < BrowserHelper
   end
 
   def enter_alias(alias_name)
+    alias_textbox.clear
     alias_textbox.send_keys(alias_name)
   end
 

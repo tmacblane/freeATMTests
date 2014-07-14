@@ -14,15 +14,15 @@ Feature: Login
     And I should be on the user login page
 
   Scenario: I should not be able to log in with an incorrect password
-    When I enter the user name test@test.com
+    When I enter the user name info@thefreeatm.com
     And I enter the password invalid
     And I click the login button
     Then I should see a message alerting me that my information was not correct
     And I should be on the user login page
 
   Scenario: The password should be case sensitive when trying to log in
-    When I enter the user name test@test.com
-    And I enter the password Tj123
+    When I enter the user name info@thefreeatm.com
+    And I enter the password frEE8t#
     And I click the login button
     Then I should see a message alerting me that my information was not correct
     And I should be on the user login page

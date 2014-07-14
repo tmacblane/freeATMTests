@@ -72,6 +72,15 @@ class LocationsPage < BrowserHelper
     get_lat_long_button.click
   end
 
+  def enter_new_location
+    self.enter_address(DateTime.now.strftime('%H%M NE %S Street'))
+    self.enter_address2('')
+    self.enter_city('Ocala')
+    self.select_state('Florida')
+    self.enter_postal_code('34479')
+    self.click_get_lat_long_button
+  end
+
   #####add neighborhoods
   def click_add_neighborhoods_link
     add_neighborhoods_link.click

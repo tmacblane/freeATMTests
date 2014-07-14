@@ -44,10 +44,12 @@ class DevicePage < BrowserHelper
   end
 
   def enter_model_type(model_type)
+    model_type_textbox.clear
     model_type_textbox.send_keys(model_type)
   end
 
   def enter_serial_number(serial_number)
+    serial_number_textbox.clear
     serial_number_textbox.send_keys(serial_number)
   end
 
@@ -57,6 +59,7 @@ class DevicePage < BrowserHelper
   end
 
   def enter_external_id(external_id)
+    external_id_textbox.clear
     external_id_textbox.send_keys(external_id)
   end
 

@@ -23,6 +23,7 @@ class PasswordsPage < BrowserHelper
   end
 
   def enter_password(password)
+    password_textbox.clear
     password_textbox.send_keys(password)
   end
 
@@ -33,6 +34,10 @@ class PasswordsPage < BrowserHelper
 
   def click_create_button
     create_button.click
+  end
+
+  def get_password_error_text
+
   end
 
   ###########################
@@ -66,6 +71,10 @@ class PasswordsPage < BrowserHelper
 
   def create_button
     self.get_element(@browser, 'create')
+  end
+
+  def password_error_label
+    self.get_element(@browser, '//li[@data-field-id="password"]')
   end
 
 end
