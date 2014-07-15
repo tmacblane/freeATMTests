@@ -21,12 +21,16 @@ def set_page(page)
       @home_page = HomePage.new(@browser)
     when 'locations index', 'create locations', 'show locations', 'edit locations'
       @locations_page = LocationsPage.new(@browser)
-    when 'user login'
-      @login_page = LoginPage.new(@browser)
+    when 'organizations index', 'create organizations', 'show organizations'
+      @organizations_page = OrganizationsPage.new(@browser)
+    when 'organizations locations'
+      @organizations_locations_page = OrganizationsLocationsPage.new(@browser)
     when 'passwords index', 'create password'
       @passwords_page = PasswordsPage.new(@browser)
     when 'persons index', 'show persons', 'create persons', 'edit persons'
       @persons_page = PersonsPage.new(@browser)
+    when 'user login'
+      @login_page = LoginPage.new(@browser)
     else
       pending(page + ' page has not been configured')
   end

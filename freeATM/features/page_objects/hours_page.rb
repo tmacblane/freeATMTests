@@ -38,8 +38,6 @@ class HoursPage < BrowserHelper
     create_button.click
   end
 
-
-
   ###########################
   ##### Page Properties #####
   ###########################

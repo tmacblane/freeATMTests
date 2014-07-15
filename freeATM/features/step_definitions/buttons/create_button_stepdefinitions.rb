@@ -4,6 +4,8 @@ When(/^I click the create button$/) do
       @communications_page.click_create_button
     when 'create locations'
       @locations_page.click_create_button
+    when 'create organizations'
+      @organizations_page.click_create_button
     when 'create password'
       @passwords_page.click_create_button
     when 'create persons'

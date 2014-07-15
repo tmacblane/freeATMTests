@@ -23,6 +23,7 @@ class OrganizationsPage < BrowserHelper
   end
 
   def enter_organization_name(organization_name)
+    organization_name_textbox.clear
     organization_name_textbox.send_keys(organization_name)
   end
 
@@ -36,33 +37,12 @@ class OrganizationsPage < BrowserHelper
     option.select_by(:text, classification)
   end
 
-  #####add organizations locations
-  def click_organizations_locations_link
-    click_organizations_locations_link.click
-  end
-
-  def select_organization_location(organization_location)
-    option = Selenium::WebDriver::Support::Select.new(organization_location_dropdown_list)
-    option.select_by(:text, organization_location)
-  end
-
-  def select_organization(organization)
-    option = Selenium::WebDriver::Support::Select.new(organization_dropdown_list)
-    option.select_by(:text, organization)
-  end
-
-  def select_organization_type(organization_type)
-    option = Selenium::WebDriver::Support::Select.new(organization_type_dropdown_list)
-    option.select_by(:text, organization_type)
-  end
-
-  def click_create_organization_location_button
-    create_organization_location_button.click
-  end
-  #####end add organizations locations
-
   def click_create_button
     create_button.click
+  end
+
+  def click_add_organizations_locations_link
+    add_organizations_locations_link.click
   end
 
   ###########################
@@ -98,29 +78,12 @@ class OrganizationsPage < BrowserHelper
     self.get_element(@browser, 'classification')
   end
 
-  #####add organization
+  def create_button
+    self.get_element(@browser, 'create')
+  end
+
   def add_organizations_locations_link
     self.get_element(@browser, '//a[contains(@href, "/organizations_locations/create?organizations.id=")]')
   end
 
-  def organization_location_dropdown_list
-    self.get_element(@browser, 'location')
-  end
-
-  def organization_dropdown_list
-    self.get_element(@browser, 'organization')
-  end
-
-  def organization_type_dropdown_list
-    self.get_element(@browser, 'type')
-  end
-
-  def create_organization_location_button
-    self.get_element(@browser, 'create')
-  end
-  #####end add organization
-
-  def create_button
-    self.get_element(@browser, 'create')
-  end
 end

@@ -55,25 +55,6 @@ class PersonsPage < BrowserHelper
     add_persons_locations_link.click
   end
 
-  def select_persons_location(location)
-    option = Selenium::WebDriver::Support::Select.new(persons_location_dropdown_list)
-    option.select_by(:text, location)
-  end
-
-  def select_person(person)
-    option = Selenium::WebDriver::Support::Select.new(person_dropdown_list)
-    option.select_by(:text, person)
-  end
-
-  def select_type(type)
-    option = Selenium::WebDriver::Support::Select.new(person_type_dropdown_list)
-    option.select_by(:text, type)
-  end
-
-  def click_create_persons_location_button
-    persons_locations_create_button.click
-  end
-
   def click_create_button
     create_button.click
   end
@@ -161,22 +142,6 @@ class PersonsPage < BrowserHelper
 
   def add_persons_locations_link
     self.get_element(@browser, '//a[contains(@href, "/persons_locations/create?persons.id=")]')
-  end
-
-  def persons_location_dropdown_list
-    self.get_element(@browser, 'location')
-  end
-
-  def person_dropdown_list
-    self.get_element(@browser, 'person')
-  end
-
-  def person_type_dropdown_list
-    self.get_element(@browser, 'type')
-  end
-
-  def persons_locations_create_button
-    self.get_element(@browser, 'create')
   end
 
   def create_button
