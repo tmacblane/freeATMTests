@@ -41,3 +41,7 @@ end
 Then(/^I should see the title is (.*)$/) do |title|
   @persons_page.get_title_text.should == title
 end
+
+And(/^I select the communication value (.*)$/) do |communication_value|
+  @persons_page.select_communications(communication_value)
+end

@@ -54,6 +54,10 @@ When(/^I navigate to the locations controller page$/) do
   @home_page.navigate_to_locations_controller
 end
 
+When(/^I navigate to the locations neighborhood page$/) do
+  @home_page.navigate_to_locations_neighborhood_controller
+end
+
 When(/^I navigate to the organizations controller page$/) do
   @home_page.navigate_to_organizations_controller
 end

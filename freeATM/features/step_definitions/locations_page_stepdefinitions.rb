@@ -31,5 +31,12 @@ And(/^I click the get lat and long button$/) do
 end
 
 When(/^I select the status (.*)$/) do |status|
-  @locations_page.select_status(status)
+  case $PAGE
+    when 'create devices'
+      @devices_page.select_status(status)
+    when 'create locations'
+      @locations_page.select_status(status)
+    else
+      pending(page + ' page has not been configured')
+  end
 end

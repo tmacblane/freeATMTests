@@ -1,13 +1,13 @@
 require File.dirname(__FILE__) + '/../support/browser_helper.rb'
 
-class NeighborhoodsPage < BrowserHelper
+class LocationsNeighborhoodsPage < BrowserHelper
 
   def initialize(browser)
     @browser = browser
   end
 
   def click_new_locations_neighborhood_button
-    click_new_locations_neighborhood_button.click
+    new_neighborhoods_button.click
   end
 
   def click_locations_neighborhoods_list_button
@@ -24,8 +24,8 @@ class NeighborhoodsPage < BrowserHelper
     option.select_by(:text, neighborhood)
   end
 
-  def click_create_neighborhood_button
-    create_neighborhood_button.click
+  def click_create_button
+    create_button.click
   end
 
   ###########################
@@ -49,7 +49,7 @@ class NeighborhoodsPage < BrowserHelper
     self.get_element(@browser, 'neighborhood')
   end
 
-  def create_neighborhood_button
+  def create_button
     self.get_element(@browser, 'create')
   end
 

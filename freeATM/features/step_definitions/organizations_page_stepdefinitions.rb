@@ -17,3 +17,15 @@ end
 And(/^I enter a random alias$/) do
   @organizations_page.enter_alias('Random Alias' + DateTime.now.strftime('%m%d%Y%H%M%S'))
 end
+
+When(/^I click the new organizations location button$/) do
+  @organizations_locations_page.click_new_organizations_locations_button
+end
+
+And(/^I select the organization (.*)$/) do |organization|
+  @organizations_locations_page.select_organization(organization)
+end
+
+And(/^I select the type (.*)$/) do |type|
+  @organizations_locations_page.select_type(type)
+end

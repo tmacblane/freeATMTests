@@ -17,13 +17,21 @@ def set_page(page)
   case page
     when 'communications index', 'show communications', 'create communications'
       @communications_page = CommunicationPage.new(@browser)
+    when 'devices index', 'show devices', 'create devices', 'edit devices'
+      @devices_page = DevicePage.new(@browser)
     when 'home'
       @home_page = HomePage.new(@browser)
+    when 'hours index', 'create hours', 'edit hours', 'show hours'
+      @hours_page = HoursPage.new(@browser)
+    when 'insertion orders index', 'create insertion orders', 'show insertion orders', 'edit insertion orders'
+      @insertion_orders_page = InsertionOrderPage.new(@browser)
     when 'locations index', 'create locations', 'show locations', 'edit locations'
       @locations_page = LocationsPage.new(@browser)
+    when 'locations neighborhoods index', 'create locations neighborhoods', 'show locations neighborhoods'
+      @locations_neighborhoods_page = LocationsNeighborhoodsPage.new(@browser)
     when 'organizations index', 'create organizations', 'show organizations'
       @organizations_page = OrganizationsPage.new(@browser)
-    when 'organizations locations'
+    when 'organizations locations index', 'create organizations locations', 'show organizations locations', 'edit organizations locations'
       @organizations_locations_page = OrganizationsLocationsPage.new(@browser)
     when 'passwords index', 'create password'
       @passwords_page = PasswordsPage.new(@browser)

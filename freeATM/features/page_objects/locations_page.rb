@@ -190,38 +190,6 @@ class LocationsPage < BrowserHelper
     add_devices_link.click
   end
 
-  def select_device_type(device_type)
-    option = Selenium::WebDriver::Support::Select.new(device_type_dropdown_list)
-    option.select_by(:text, device_type)
-  end
-
-  def enter_model_type(model_type)
-    model_type_textbox.send_keys(model_type)
-  end
-
-  def enter_serial_number(serial_number)
-    serial_number_textbox.send_keys(serial_number)
-  end
-
-  def select_status(status)
-    option = Selenium::WebDriver::Support::Select.new(status_dropdown_list)
-    option.select_by(:text, status)
-  end
-
-  def enter_external_id(external_id)
-    external_id_textbox.send_keys(external_id)
-  end
-
-  def select_device_location(device_location)
-    option = Selenium::WebDriver::Support::Select.new(device_locations_dropdown_list)
-    option.select_by(:text, device_location)
-  end
-
-  def click_create_device_button
-    create_device_button.click
-  end
-  #####end add devices
-
   def click_create_button
     create_button.click
   end

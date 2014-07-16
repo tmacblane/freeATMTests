@@ -6,6 +6,10 @@ class OrganizationsLocationsPage < BrowserHelper
     @browser = browser
   end
 
+  def click_new_organizations_locations_button
+    new_organizations_locations_button.click
+  end
+
   def select_organization_location(organization_location)
     option = Selenium::WebDriver::Support::Select.new(location_dropdown_list)
     option.select_by(:text, organization_location)
@@ -16,7 +20,7 @@ class OrganizationsLocationsPage < BrowserHelper
     option.select_by(:text, organization)
   end
 
-  def select_organization_type(organization_type)
+  def select_type(organization_type)
     option = Selenium::WebDriver::Support::Select.new(type_dropdown_list)
     option.select_by(:text, organization_type)
   end
@@ -30,6 +34,10 @@ class OrganizationsLocationsPage < BrowserHelper
   ###########################
 
   private
+
+  def new_organizations_locations_button
+    self.get_element(@browser, '//a[@href="/organizations_locations/create"]')
+  end
 
   def location_dropdown_list
     self.get_element(@browser, 'location')

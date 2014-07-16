@@ -58,6 +58,11 @@ class DevicePage < BrowserHelper
     option.select_by(:text, address)
   end
 
+  def select_status(status)
+    option = Selenium::WebDriver::Support::Select.new(status_dropdown_list)
+    option.select_by(:text, status)
+  end
+
   def enter_external_id(external_id)
     external_id_textbox.clear
     external_id_textbox.send_keys(external_id)

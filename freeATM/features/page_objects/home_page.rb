@@ -62,6 +62,10 @@ class HomePage < BrowserHelper
     locations_controller_link.click
   end
 
+  def navigate_to_locations_neighborhood_controller
+    locations_neighborhoods_controller_link.click
+  end
+
   def navigate_to_organizations_controller
     organizations_controller_link.click
   end

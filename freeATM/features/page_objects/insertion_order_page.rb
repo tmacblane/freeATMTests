@@ -30,25 +30,10 @@ class InsertionOrderPage < BrowserHelper
     order_name_textbox.send_keys(order_name)
   end
 
-  #####add advertisement
   def click_add_advertiser_link
     add_advertiser_link.click
   end
 
-  def select_insertion_order(insertion_order)
-    option = Selenium::WebDriver::Support::Select.new(insertion_order_dropdown_list)
-    option.select_by(:text, insertion_order)
-  end
-
-  def select_organization(organization)
-    option = Selenium::WebDriver::Support::Select.new(organization_dropdown_list)
-    option.select_by(:text, organization)
-  end
-
-  def click_create_advertiser_button
-    create_advertiser_button.click
-  end
-  #####end add advertisement
 
   #####add trafficker
   def click_add_trafficker_link
@@ -275,23 +260,10 @@ class InsertionOrderPage < BrowserHelper
     self.get_element(@browser, 'insertion_order_name')
   end
 
-  #####add advertiser order
   def add_advertiser_link
     self.get_element(@browser, '//a[contains(@href, "/insertion_orders_organizations_advertisers/create?insertion_orders.id=")]')
   end
 
-  def insertion_order_dropdown_list
-    self.get_element(@browser, 'insertion_order')
-  end
-
-  def organization_dropdown_list
-    self.get_element(@browser, 'organization')
-  end
-
-  def create_advertiser_button
-    self.get_element(@browser, 'create')
-  end
-  #####end advertiser
 
   #####add trafficker
   def add_trafficker_link
