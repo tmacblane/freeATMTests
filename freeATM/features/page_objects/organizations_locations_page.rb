@@ -25,7 +25,7 @@ class OrganizationsLocationsPage < BrowserHelper
     option.select_by(:text, organization_type)
   end
 
-  def click_button
+  def click_create_button
     create_button.click
   end
 
