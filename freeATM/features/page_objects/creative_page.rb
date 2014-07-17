@@ -72,6 +72,7 @@ class CreativePage < BrowserHelper
   end
 
   def enter_length(length)
+    length_textbox.clear
     length_textbox.send_keys(length)
   end
 

@@ -1,3 +1,5 @@
+$NEW_ORGANIZATION = nil
+
 When(/^I click the new organizations button$/) do
   @organizations_page.click_new_organizations_button
 end
@@ -28,4 +30,11 @@ end
 
 And(/^I select the type (.*)$/) do |type|
   @organizations_locations_page.select_type(type)
+end
+
+When(/^I create a new organization$/) do
+  $NEW_ORGANIZATION = 'Random Organization' + DateTime.now.strftime('%m%d%Y%H%M%S')
+  @organizations_page.enter_organization_name($NEW_ORGANIZATION)
+  @organizations_page.enter_alias('Random Alias' + DateTime.now.strftime('%m%d%Y%H%M%S'))
+  @organizations_page.select_classification('Host')
 end

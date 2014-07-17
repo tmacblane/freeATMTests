@@ -2,6 +2,8 @@ When(/^I click the create button$/) do
   case $PAGE
     when 'create communications'
       @communications_page.click_create_button
+    when 'create creatives'
+      @creatives_page.click_create_button
     when 'create devices'
       @devices_page.click_create_button
     when 'create hours'
@@ -20,6 +22,8 @@ When(/^I click the create button$/) do
       @passwords_page.click_create_button
     when 'create persons'
       @persons_page.click_create_button
+    when 'create venue statistics'
+      @venue_statistics_page.click_create_button
     else
       pending(page + ' page has not been configured')
   end

@@ -24,6 +24,8 @@ And(/^I select the location (.*)$/) do |location|
       @locations_neighborhoods_page.select_location(location)
     when 'create organizations locations', 'edit organizations locations'
       @organizations_locations_page.select_organization_location(location)
+    when 'create venue statistics', 'edit venue statistics'
+      @venue_statistics_page.select_location(location)
     else
       pending(page + ' page has not been configured')
   end

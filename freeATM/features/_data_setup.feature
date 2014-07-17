@@ -576,3 +576,52 @@ Feature: Data Setup
     | DU          | DU-FS1      | DU-           | Tentative  | 345 Hudson St, New York, New York 10014            |
     | DU          | DU-FS1      | DU-           | Offline    | 13-25 Astor Pl, New York, New York 10003           |
     | DU          | DU-FS1      | DU-           | Terminated | 315 7th Ave, New York, New York 10001              |
+
+  Scenario Outline: Set venue statistics
+    When I navigate to the venues statistics controller page
+    Then I should be on the venue statistics index page
+    When I click the new venue statistics button
+    Then I should be on the create venue statistics page
+    When I select the venue type <venue type>
+    And I enter the gvt <gvt>
+    And I select the gvt type <gvt type>
+    And I select the location <location>
+    And I click the create button
+    Then I should be on the show venue statistics page
+
+    Examples:
+    | venue type        | gvt    | gvt type | location                                           |
+    | Convenience Store | 5000   | Monthly  | 669 Nostrand Ave, Brooklyn, New York 11216         |
+    | Convenience Store | 10000  | Monthly  | 777 Nostrand Ave, Brooklyn, New York 11216         |
+    # Convenience Store | 100000 | Yearly   | 871 Franklin Ave, Brooklyn, New York 11225         |
+    | Convenience Store | 1000   | Weekly   | 137 Kingston Avenue, Brooklyn, New York 11213      |
+    | Convenience Store | 2500   | Weekly   | 1618 Bedford Ave, Brooklyn, New York 11225         |
+    | Convenience Store | 3000   | Weekly   | 1600 St Johns Pl, Brooklyn, New York 11233         |
+    | Convenience Store | 4000   | Weekly   | 387 Flatbush Ave, Brooklyn, New York 11238         |
+    | Convenience Store | 8000   | Monthly  | 794 Washington Ave, Brooklyn, New York 11238       |
+    | Convenience Store | 8000   | Monthly  | 567 Vanderbilt Ave, Brooklyn, New York 11238       |
+    | Convenience Store | 4000   | Monthly  | 133 6th Ave, Brooklyn, New York 11217              |
+    | Convenience Store | 4000   | Monthly  | 294 7th Ave, Brooklyn, New York 11215              |
+    | Convenience Store | 400    | Monthly  | 168 7th Ave, Brooklyn, New York 11215              |
+    | Convenience Store | 100    | Weekly   | 513 5th Ave, Brooklyn, New York 11215              |
+    | Convenience Store | 1600   | Monthly  | 556 6th Ave, Brooklyn, New York 11215              |
+    | Convenience Store | 8000   | Weekly   | 33 Main St, Brooklyn, New York 11201               |
+    | Convenience Store | 24000  | Monthly  | 111 Front St, Brooklyn, New York 11201             |
+    | Convenience Store | 96000  | Yearly   | 1122 Manhattan Ave, Brooklyn, New York 11222       |
+    | Convenience Store | 48000  | Yearly   | 210 Franklin St, Brooklyn, New York 11222          |
+    | Convenience Store | 12000  | Yearly   | 912 Manhattan Ave, Brooklyn, New York 11222        |
+    | Convenience Store | 1000   | Monthly  | 27 2 Cres, Astoria, New York 11105                 |
+    | Convenience Store | 800    | Weekly   | 2553 18th St, Astoria, New York 11102              |
+    | Convenience Store | 100    | Weekly   | 33-12 23rd Ave, Astoria, New York 11105            |
+    | Convenience Store | 6000   | Weekly   | 2619 24th Ave, Long Island City, New York 11102    |
+    | Convenience Store | 8000   | Monthly  | 4916 Vernon Blvd, Long Island City, New York 11101 |
+    | Convenience Store | 96000  | Yearly   | 4802 108th St, Corona, New York 11368              |
+    | Convenience Store | 96000  | Yearly   | 10115 Martense Ave, Flushing, New York 11368       |
+   #| Cafe              | 24000  | Yearly   | 620 Atlantic Ave, Brooklyn, New York 11217         |
+    | Cafe              | 24000  | Yearly   | 164 Smith Street, Brooklyn, New York 11231         |
+    | Cafe              | 4000   | Monthly  | 134 Montague St, Brooklyn, New York 11201          |
+    | Cafe              | 24000  | Yearly   | 67 Front St, Brooklyn, New York 11201              |
+    | Cafe              | 24000  | Yearly   | 111 Worth St, New York, New York 10013             |
+    | Cafe              | 4000   | Monthly  | 345 Hudson St, New York, New York 10014            |
+    | Cafe              | 1000   | Weekly   | 13-25 Astor Pl, New York, New York 10003           |
+    # Cafe              | 1000   | Weekly   | 315 7th Ave, New York, New York 10001              |

@@ -17,6 +17,8 @@ def set_page(page)
   case page
     when 'communications index', 'show communications', 'create communications'
       @communications_page = CommunicationPage.new(@browser)
+    when 'creatives index', 'create creatives', 'edit creatives', 'show creatives'
+      @creatives_page = CreativePage.new(@browser)
     when 'devices index', 'show devices', 'create devices', 'edit devices'
       @devices_page = DevicePage.new(@browser)
     when 'home'
@@ -39,6 +41,8 @@ def set_page(page)
       @persons_page = PersonsPage.new(@browser)
     when 'user login'
       @login_page = LoginPage.new(@browser)
+    when 'venue statistics index', 'create venue statistics', 'edit venue statistics', 'show venue statistics'
+      @venue_statistics_page = VenuesStatisticsPage.new(@browser)
     else
       pending(page + ' page has not been configured')
   end
