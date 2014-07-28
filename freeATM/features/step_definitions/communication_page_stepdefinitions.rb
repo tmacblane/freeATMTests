@@ -16,14 +16,8 @@ Then(/^I should be alerted that communication value cannot be blank$/) do
   @communications_page.get_communication_error_text.should == 'Property [communication_Value] of class [class cms.Communications] cannot be null'
 end
 
-Then(/^I should be alerted that my email is not in the corect format$/) do
-  pending
-  @communications_page.get_communication_error_text.should == 'TBD'
-end
-
 Then(/^I should be alerted that the email entered already exists$/) do
-  pending
-  @communications_page.get_communication_error_text.should == 'TBD'
+  @communications_page.get_communication_error_text.should == 'Property [communication_Value] of class [class cms.Communications] with value [duplicate@test.com] must be unique'
 end
 
 When(/^I enter the communication value (.*)/) do |communication_value|
@@ -49,5 +43,13 @@ end
 
 And(/^I enter a new email communication value (.*)$/) do |email_address|
   current_date = DateTime.now
+  @communications_page.enter_communication_value(email_address + current_date.strftime('%m%d%Y%H%M%S') + '@test.freeatm.com')
+end
+
+Then(/^I should see that the communication value field is in error$/) do
+  @communications_page.get_communication_textbox_css_property('background-color').should == 'rgba(255, 243, 243, 1)'
+end
+
+And(/^I enter the enter a new email address$/) do
   @communications_page.enter_communication_value(email_address + current_date.strftime('%m%d%Y%H%M%S') + '@test.freeatm.com')
 end

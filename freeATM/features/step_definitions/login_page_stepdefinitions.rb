@@ -16,9 +16,20 @@ When(/^I enter the user name (.*)$/) do |username|
 end
 
 And(/^I enter the password (.*)$/) do |password|
-  @login_page.enter_password(password)
+  case $PAGE
+    when 'user login'
+      @login_page.enter_password(password)
+    when 'create password'
+      @passwords_page.enter_password(password)
+    else
+      pending(page + ' page has not been configured')
+  end
 end
 
 Then(/^I should see a message alerting me that my information was not correct$/) do
   @login_page.alert_message_visible.should == true
+end
+
+When(/^I log in as the newly created user$/) do
+  @login_page.login($NEW_COMMUNICATIONS_VALUE, 'testing!')
 end

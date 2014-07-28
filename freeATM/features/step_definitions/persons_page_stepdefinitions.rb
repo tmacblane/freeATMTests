@@ -1,3 +1,6 @@
+$FIRST_NAME_VALUE = nil
+$LAST_NAME_VALUE = nil
+
 When(/^I click the new persons button$/) do
   @persons_page.click_new_persons_button
 end
@@ -44,4 +47,15 @@ end
 
 And(/^I select the communication value (.*)$/) do |communication_value|
   @persons_page.select_communications(communication_value)
+end
+
+When(/^I enter a new first name$/) do
+  $FIRST_NAME_VALUE = 'New'
+  @persons_page.enter_first_name($FIRST_NAME_VALUE)
+end
+
+And(/^I enter a new last name$/) do
+  current_date = DateTime.now
+  $LAST_NAME_VALUE = current_date.strftime('%m%d%H%M%S')
+  @persons_page.enter_last_name($LAST_NAME_VALUE)
 end

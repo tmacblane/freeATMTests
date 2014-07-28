@@ -593,7 +593,7 @@ Feature: Data Setup
     | venue type        | gvt    | gvt type | location                                           |
     | Convenience Store | 5000   | Monthly  | 669 Nostrand Ave, Brooklyn, New York 11216         |
     | Convenience Store | 10000  | Monthly  | 777 Nostrand Ave, Brooklyn, New York 11216         |
-    # Convenience Store | 100000 | Yearly   | 871 Franklin Ave, Brooklyn, New York 11225         |
+    | Convenience Store | 100000 | Yearly   | 871 Franklin Ave, Brooklyn, New York 11225         |
     | Convenience Store | 1000   | Weekly   | 137 Kingston Avenue, Brooklyn, New York 11213      |
     | Convenience Store | 2500   | Weekly   | 1618 Bedford Ave, Brooklyn, New York 11225         |
     | Convenience Store | 3000   | Weekly   | 1600 St Johns Pl, Brooklyn, New York 11233         |
@@ -617,11 +617,11 @@ Feature: Data Setup
     | Convenience Store | 8000   | Monthly  | 4916 Vernon Blvd, Long Island City, New York 11101 |
     | Convenience Store | 96000  | Yearly   | 4802 108th St, Corona, New York 11368              |
     | Convenience Store | 96000  | Yearly   | 10115 Martense Ave, Flushing, New York 11368       |
-   #| Cafe              | 24000  | Yearly   | 620 Atlantic Ave, Brooklyn, New York 11217         |
+    | Cafe              | 24000  | Yearly   | 620 Atlantic Ave, Brooklyn, New York 11217         |
     | Cafe              | 24000  | Yearly   | 164 Smith Street, Brooklyn, New York 11231         |
     | Cafe              | 4000   | Monthly  | 134 Montague St, Brooklyn, New York 11201          |
     | Cafe              | 24000  | Yearly   | 67 Front St, Brooklyn, New York 11201              |
     | Cafe              | 24000  | Yearly   | 111 Worth St, New York, New York 10013             |
     | Cafe              | 4000   | Monthly  | 345 Hudson St, New York, New York 10014            |
     | Cafe              | 1000   | Weekly   | 13-25 Astor Pl, New York, New York 10003           |
-    # Cafe              | 1000   | Weekly   | 315 7th Ave, New York, New York 10001              |
+    | Cafe              | 1000   | Weekly   | 315 7th Ave, New York, New York 10001              |

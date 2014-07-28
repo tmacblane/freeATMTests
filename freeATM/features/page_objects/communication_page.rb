@@ -49,6 +49,10 @@ class CommunicationPage < BrowserHelper
     communication_error_label.text
   end
 
+  def get_communication_textbox_css_property(style)
+    communication_value_textbox.style(style)
+  end
+
   ###########################
   ##### Page Properties #####
   ###########################

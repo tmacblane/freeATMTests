@@ -35,12 +35,14 @@ def set_page(page)
       @organizations_page = OrganizationsPage.new(@browser)
     when 'organizations locations index', 'create organizations locations', 'show organizations locations', 'edit organizations locations'
       @organizations_locations_page = OrganizationsLocationsPage.new(@browser)
-    when 'passwords index', 'create password'
+    when 'passwords index', 'create password', 'show passwords'
       @passwords_page = PasswordsPage.new(@browser)
     when 'persons index', 'show persons', 'create persons', 'edit persons'
       @persons_page = PersonsPage.new(@browser)
     when 'user login'
       @login_page = LoginPage.new(@browser)
+    when 'users index'
+      @users_page = UsersPage.new(@browser)
     when 'venue statistics index', 'create venue statistics', 'edit venue statistics', 'show venue statistics'
       @venue_statistics_page = VenuesStatisticsPage.new(@browser)
     else
@@ -55,4 +57,8 @@ end
 
 When(/^I open the home page$/) do
   @browser.navigate.to('http://qa.cms.thefreeatm.com')
+end
+
+Then(/^I should see the page title (.*)$/) do | title |
+  @browser.title.should == title
 end

@@ -1,4 +1,4 @@
-Feature: Login
+  Feature: Login
 
   Background:
     Given I open the user login page

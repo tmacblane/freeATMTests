@@ -27,7 +27,7 @@ class PasswordsPage < BrowserHelper
     password_textbox.send_keys(password)
   end
 
-  def select_persons(person)
+  def select_person(person)
     option = Selenium::WebDriver::Support::Select.new(persons_dropdown_list)
     option.select_by(:text, person)
   end
