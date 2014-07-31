@@ -39,18 +39,22 @@ class CreativePage < BrowserHelper
   end
 
   def enter_creative_name(creative_name)
+    creative_name_textbox.clear
     creative_name_textbox.send_keys(creative_name)
   end
 
   def enter_description(description)
+    description_textbox.clear
     description_textbox.send_keys(description)
   end
 
   def enter_creative_pointer(creative_pointer)
+    creative_pointer_textbox.clear
     creative_pointer_textbox.send_keys(creative_pointer)
   end
 
   def enter_alt_text(alt_text)
+    alt_text_textbox.clear
     alt_text_textbox.send_keys(alt_text)
   end
 
@@ -60,14 +64,17 @@ class CreativePage < BrowserHelper
   end
 
   def enter_size(size)
+    size_textbox.clear
     size_textbox.send_keys(size)
   end
 
   def enter_click_url(click_url)
+    click_url_textbox.clear
     click_url_textbox.send_keys(click_url)
   end
 
   def enter_third_party_url(third_party_url)
+    thirdparty_url_textbox.clear
     thirdparty_url_textbox.send_keys(third_party_url)
   end
 
@@ -83,6 +90,34 @@ class CreativePage < BrowserHelper
 
   def click_create_button
     create_button.click
+  end
+
+  def get_creative_name_field_css_property(style)
+    creative_name_textbox.style(style)
+  end
+
+  def get_creative_pointer_field_css_property(style)
+    creative_pointer_textbox.style(style)
+  end
+
+  def get_alt_text_field_css_property(style)
+    alt_text_textbox.style(style)
+  end
+
+  def get_size_field_css_property(style)
+    size_textbox.style(style)
+  end
+
+  def get_length_field_css_property(style)
+    length_textbox.style(style)
+  end
+
+  def get_click_url_field_css_property(style)
+    click_url_textbox.style(style)
+  end
+
+  def get_third_party_url_field_css_property(style)
+    thirdparty_url_textbox.style(style)
   end
 
   ###########################
@@ -132,7 +167,7 @@ class CreativePage < BrowserHelper
   end
 
   def creative_pointer_textbox
-    self.get_element(@browser, 'creative_pointer')
+    self.get_element(@browser, 'cpointer')
   end
 
   def alt_text_textbox

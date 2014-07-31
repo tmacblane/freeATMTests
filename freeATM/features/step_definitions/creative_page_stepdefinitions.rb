@@ -18,3 +18,39 @@ end
 When(/^I enter a creative name$/) do
   @creatives_page.enter_creative_name('Creative' + DateTime.now.strftime('%m%d%Y%H%M%S'))
 end
+
+Then(/^I should see that the creative name field is in error$/) do
+  @creatives_page.get_creative_name_field_css_property('background-color').should == 'rgba(255, 243, 243, 1)'
+end
+
+And(/^I should see that the creative pointer field is in error$/) do
+  @creatives_page.get_creative_pointer_field_css_property('background-color').should == 'rgba(255, 243, 243, 1)'
+end
+
+And(/^I should see that the alt text field is in error$/) do
+  @creatives_page.get_alt_text_field_css_property('background-color').should == 'rgba(255, 243, 243, 1)'
+end
+
+And(/^I should see that the size field is in error$/) do
+  @creatives_page.get_size_field_css_property('background-color').should == 'rgba(255, 243, 243, 1)'
+end
+
+And(/^I enter an invalid creative pointer url$/) do
+  @creatives_page.enter_creative_pointer('invalid')
+end
+
+And(/^I enter an invalid click url$/) do
+  @creatives_page.enter_click_url('invalid')
+end
+
+And(/^I enter an invalid third party url$/) do
+  @creatives_page.enter_third_party_url('invalid')
+end
+
+Then(/^I should see that click url field is in error$/) do
+  @creatives_page.get_click_url_field_css_property('background-color').should == 'rgba(255, 243, 243, 1)'
+end
+
+Then(/^I should see that the third party url field is in error$/) do
+  @creatives_page.get_third_party_url_field_css_property('background-color').should == 'rgba(255, 243, 243, 1)'
+end

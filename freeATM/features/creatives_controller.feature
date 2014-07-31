@@ -26,32 +26,42 @@ Feature: Creatives Controller
   Scenario: I should be alerted which fields are required
     When I navigate to the creatives controller page
     Then I should be on the creatives index page
-    When I enter a creative name
-    And I click the create button
-    Then I should be alerted that creative pointer is required
-    And I should be alerted that alt text is required
-    And I should be alerted that size is required
+    When I click the new creatives button
+    Then I should be on the create creatives page
+    When I click the create button
+    Then I should see that the creative name field is in error
+    And I should see that the creative pointer field is in error
+    And I should see that the alt text field is in error
+    And I should see that the size field is in error
 
   Scenario: I should be alerted that creative pointer is not a url
     When I navigate to the creatives controller page
     Then I should be on the creatives index page
-    When I enter a creative name
+    When I click the new creatives button
+    Then I should be on the create creatives page
+    When I enter a new creative
     And I enter an invalid creative pointer url
     And I click the create button
-    Then I should be alertd that the creative pointer url is not valid
+    Then I should see that the creative pointer field is in error
 
   Scenario: I should be alerted that click url is not a url
     When I navigate to the creatives controller page
     Then I should be on the creatives index page
+    When I click the new creatives button
+    Then I should be on the create creatives page
+    When I enter a new creative
     And I enter an invalid click url
     And I click the create button
-    Then I should be alerted that the click url is not valid
+    Then I should see that click url field is in error
 
   Scenario: I should be alerted that third party is not a url
     When I navigate to the creatives controller page
     Then I should be on the creatives index page
+    When I click the new creatives button
+    Then I should be on the create creatives page
+    When I enter a new creative
     And I enter an invalid third party url
     And I click the create button
-    Then I should be alerted that the third party url is not valid
+    Then I should see that the third party url field is in error
 
 
